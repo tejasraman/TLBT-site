@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<title>Shop Now | The Little Bellflower</title>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <img src="../assets/Etsy Logo New.png" height="47px" style="float: left !important;" onclick="goHome()">
+    <a class="tlbflogofpgmobile">&nbsp;&nbsp;</a>
+    </a>
+    <a href="../about.html">About Us</a>
+    <a class="active">Shop</a>
+  <a href="../index.html">Home</a>
+  <a class="icon" onclick="myFunction()">
+    <span class="material-symbols-outlined" style="color: black;">
+        menu
+    </span>
+  </a>
+</div>
+
+
+
+<main style="margin: 10px;">
+
+    <h1 id="artisanal-cards">Shop our Store</h1>
+   
+    <div class="tab">
+      <center>
+      <button class="tablinks" onclick="openContent(event, 'Cards')">Cards</button>
+      &nbsp;&nbsp;&nbsp;
+      <button class="tablinks" onclick="openContent(event, 'Earrings')">Earrings &amp; other jewelery</button>
+      &nbsp;&nbsp;&nbsp;
+      <button class="tablinks" onclick="openContent(event, 'Bookmarks')">Bookmarks</button>
+    </center>
+    </div>
+
+
+<!-- Each tabcontent class contains a different type of listing. */ -->
+    
+    <div id="Cards" class="tabcontent">
+      
+    </div>
+    
+    <div id="Earrings" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p> 
+    </div>
+    
+    <div id="Bookmarks" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+
+
+
+    
+</main>
+<!--Scripts for responsive nav and slideshow-->
+<script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        function openContent(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+function goHome() {
+            window.open("../index.html","_self");
+        }
+</script>
+
+
+</body>
+</html>

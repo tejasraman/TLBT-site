@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <img src="assets/Etsy Logo New.png" height="45px" style="float: left !important;">
+    <a class="tlbflogofpgmobile">&nbsp;&nbsp;</a>
+    </a>
+    <a href="about.html">About Us</a>
+    <a href="shop/shop.html">Shop</a>
+  <a class="active">Home</a>
+  <a class="icon" onclick="myFunction()">
+    <span class="material-symbols-outlined" style="color: black;">
+        menu
+    </span>
+  </a>
+</div>
+
+
+
+<main style="margin: 10px;">
+
+    <h1 id="artisanal-cards">Handmade, artisan 3D popup cards and jewelry</h1>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="assets/IMG_4982.jpeg" style="width:100%">
+          <div class="text">Wedding Card</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="assets/IMG_5218.jpeg" style="width:100%">
+          <div class="text">Graduation Card</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="assets/IMG_5283.jpeg" style="width:100%">
+          <div class="text">Birthday Card with Cake</div>
+        </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" id="dot1"></span>
+          <span class="dot" id="dot2"></span>
+          <span class="dot" id="dot3"></span>
+        </div>
+        <br><p class="firstpg">Handmade 3-D popup cards and jewelery. Made with <span class="material-symbols-outlined firstpgx" style="color: #810000;">
+          favorite
+          </span> in Longmont, Colorado.</p>
+          <button id="SNBTN1836" onclick="shopNow()">Shop Now</button>
+
+<div style="height: 10vh;"></div>
+<div class="row">
+<div class="column"  style="background-color: #e4e4e4;">
+  <img src="assets/IMG_4982.jpeg" width="100%">
+
+  
+  <h2 class="cardtext">Cards</h2>
+  <button id="SNBTN1836">Shop<br>Cards</button>
+</div>
+    <div class="columnx"></div>
+<div class="column" style="background-color: #e4e4e4;">
+  <img src="assets/earring1.jpeg" width="100%">
+
+  <h2 class="cardtext">Earrings</h2>
+  <button id="SNBTN1836">Shop<br>Earrings</button>
+</div>
+    <div class="columnx"></div>
+  <div class="column"  style="background-color: #e4e4e4;">
+    <img src="assets/bookmarks.jpg" width="100%">
+
+    <h2 class="cardtext">Bookmarks</h2>
+    <button id="SNBTN1836">Shop<br>Bookmarks</button>
+  </div>
+    <div class="columnx"></div>
+  <div class="column" style="background-color: #e4e4e4;">
+    <img src="assets/IMG_0264.jpeg" width="100%">
+
+    <h2 class="cardtext">Mousepads</h2>
+    <button id="CSBTN1048">Coming<br>Soon</button>
+  </div>
+  </div>
+
+</main>
+<!--Scripts for responsive nav and slideshow-->
+<script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 10000); // Change image every 2 seconds
+        }
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        function shopNow() {
+            window.open("shop/shop.html","_self");
+        }
+        function EtsyOpen() {
+            window.open("https://www.etsy.com/shop/TheLittleBellflower","_self");
+        }
+</script>
+
+<div class="footer">
+  <span>2022, The Little Bellflower.</span> <br>
+  <button onclick="EtsyOpen()" class="etsy"><span>See our Etsy page!</span></button>
+</div>
+
+</body>
+</html>
